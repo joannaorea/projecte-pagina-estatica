@@ -1,0 +1,299 @@
+/* font de la lletra */
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+
+/* mida general pagina */
+html,
+body {
+    width: 100%; 
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, serif; /* font del text */
+    color: #000000; /* color text */
+    background-color: #fff2da; /* color fons */
+    line-height: 1.6; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+main {
+    flex: 1; 
+    width: 100%; 
+    margin: 0; /* elimina marges */
+    padding-top: 75px; 
+}
+
+/* titols */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Petit Formal Script', cursive;
+}
+
+/* elimina subratllat links */
+a {
+    text-decoration: none;
+}
+
+/* barra negra d'adalt */
+header {
+    background-color: #000000; /* color barra */
+    height: 75px; /* altura barra */
+    padding: 0 60px; 
+    position: fixed; /* barra fixa */
+    top: 0; /* barra adalt */
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; /* sobreposició de la barra */
+}
+
+nav {
+    width: 100%; 
+    height: 75px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+/* nom restaurant */
+nav h1 {
+    color: #b9dbdd; /* color */
+    font-size: 32px; 
+    margin-left: 0; 
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+nav ul li {
+    display: flex; 
+    align-items: center; 
+}
+
+nav ul li a {
+    color: #b9dbdd; 
+    font-size: 20px; 
+    transition: color 0.3s; /* temps que pasa quan poses el ratoli a sobre */
+}
+
+nav ul li a:hover {
+    color: #00428d; 
+}
+
+/* index.html */
+.hero {
+    width: 100%; 
+    min-height: calc(100vh - 75px - 68px);
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    /* fons pagina inici */
+    background:
+        linear-gradient(
+            rgba(82, 82, 82, 0.58), /* transparencia del fons (imatge) (la part de dalt) */
+            rgba(82, 82, 82, 0.58) /* transparencia del fons (imatge) (la part de baix) */
+        ),
+        url("img/restaurante.jpg") center center / cover no-repeat; /* imatge restaurant pagina inici */
+}
+
+.hero div {
+    color: rgb(177, 135, 135); /* color text */
+    transform: translateY(-90px); 
+}
+
+.hero h2 {
+    font-size: 68px; 
+    margin-bottom: 18px; 
+    color: #240b00; /* color text */
+}
+
+.hero a {
+    display: inline-block; 
+    background-color: #240b00; /* color boto */
+    color: #b9dbdd; 
+    padding: 14px 28px; 
+    border-radius: 5px; 
+    font-size: 17px; 
+    transition: background-color 0.3s; /* temps que pasa quan poses el ratoli a sobre */
+}
+
+.hero a:hover {
+    background-color: #00428d;
+}
+
+main > section:not(.hero) {
+    max-width: 1100px; 
+    margin: auto; 
+    padding: 80px 30px; 
+}
+
+section h2 {
+    text-align: center; 
+    color: #8f4e33; 
+    font-size: 38px; 
+    margin-bottom: 35px; 
+}
+
+section > p {
+    max-width: 850px; 
+    margin: 0 auto 20px; 
+    text-align: center; 
+    font-size: 18px;
+}
+
+/* plats */
+#carta article,
+#pizzes article,
+#pastes article,
+#antipasti article,
+#postres article,
+#begudes article {
+    position: relative; /* posicio preu */
+    max-width: 850px; 
+    margin: auto; 
+    padding: 20px 0; 
+    border-bottom: 1px solid #ddd; 
+}
+
+/* nom plats */
+article h4 {
+    font-size: 20px; 
+    color: #8f4e33; 
+}
+
+article p {
+    color: #666; 
+    margin-right: 100px; 
+}
+
+article span {
+    position: absolute; 
+    right: 0; 
+    top: 22px; 
+    font-weight: bold; 
+    color: #000000; 
+}
+
+/* imatges */
+.galeria {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; /* espai entre imatges */
+    max-width: 1000px; 
+    margin: auto; 
+}
+
+.galeria img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s; /* temps que pasa quan poses el ratoli a sobre */
+}
+
+.galeria img:hover {
+    transform: scale(1.03); /* fa gran la imatge */
+}
+
+#contacte {
+    text-align: center; 
+}
+
+#contacte h3 {
+    margin-top: 30px; 
+    margin-bottom: 10px; 
+    color: #8f4e33; 
+    font-size: 25px; 
+}
+
+#contacte p {
+    margin-bottom: 10px;   
+}
+
+/* barra abaix */
+footer {
+    background-color: #000000; 
+    color: #b9dbdd; 
+    text-align: center; 
+    height: 68px; 
+    padding: 12px; 
+    margin-top: auto; 
+}
+
+footer p {
+    margin: 2px; 
+}
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto; 
+        padding: 15px 20px; 
+    }
+
+    nav {
+        height: auto; 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    
+    nav h1 {
+        font-size: 28px; 
+    }
+
+    nav ul {
+        gap: 15px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    main {
+        padding-top: 140px; 
+    }
+
+    .hero {
+        min-height: calc(100vh - 140px); 
+    }
+
+    .hero div {
+        transform: translateY(-40px);
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: 250px;
+    }
+
+    article p {
+        margin-right: 0;
+        padding-right: 80px;
+    }
+
+}
